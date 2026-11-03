@@ -2,6 +2,8 @@
 
 namespace PrinsFrank\Core14FontMetrics;
 
+use Override;
+
 enum ZapfDingbats implements Font {
     case space;
     case a1;
@@ -206,6 +208,7 @@ enum ZapfDingbats implements Font {
     case a190;
     case a191;
 
+    #[Override]
     public function getWidth(): float {
         return match ($this) {
             self::space => 0.278,
@@ -413,6 +416,7 @@ enum ZapfDingbats implements Font {
         };
     }
 
+    #[Override]
     public static function fromCharacterCode(int $code): ?self {
         return match ($code) {
             32 => self::space,
@@ -617,6 +621,7 @@ enum ZapfDingbats implements Font {
             252 => self::a189,
             253 => self::a190,
             254 => self::a191,
+            default => null,
         };
     }
 }

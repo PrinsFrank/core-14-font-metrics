@@ -5,3 +5,5 @@
 /.gitattributes     export-ignore
 /.gitignore         export-ignore
 /composer.lock      export-ignore
+/.php-cs-fixer.php  export-ignore
+/phpstan.neon       export-ignore

@@ -2,6 +2,8 @@
 
 namespace PrinsFrank\Core14FontMetrics;
 
+use Override;
+
 enum Helvetica implements Font {
     case space;
     case exclam;
@@ -319,6 +321,7 @@ enum Helvetica implements Font {
     case imacron;
     case Euro;
 
+    #[Override]
     public function getWidth(): float {
         return match ($this) {
             self::space => 0.278,
@@ -639,6 +642,7 @@ enum Helvetica implements Font {
         };
     }
 
+    #[Override]
     public static function fromCharacterCode(int $code): ?self {
         return match ($code) {
             32 => self::space,

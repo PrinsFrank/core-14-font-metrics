@@ -2,6 +2,8 @@
 
 namespace PrinsFrank\Core14FontMetrics;
 
+use Override;
+
 enum Symbol implements Font {
     case space;
     case exclam;
@@ -194,6 +196,7 @@ enum Symbol implements Font {
     case bracerightbt;
     case apple;
 
+    #[Override]
     public function getWidth(): float {
         return match ($this) {
             self::space => 0.250,
@@ -389,6 +392,7 @@ enum Symbol implements Font {
         };
     }
 
+    #[Override]
     public static function fromCharacterCode(int $code): ?self {
         return match ($code) {
             32 => self::space,
@@ -580,6 +584,7 @@ enum Symbol implements Font {
             252 => self::bracerighttp,
             253 => self::bracerightmid,
             254 => self::bracerightbt,
+            default => null,
         };
     }
 }
