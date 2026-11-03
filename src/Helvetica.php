@@ -320,7 +320,7 @@ enum Helvetica implements Font {
     case Euro;
 
     public function getWidth(): float {
-        return match($this) {
+        return match ($this) {
             self::space => 0.278,
             self::exclam => 0.278,
             self::quotedbl => 0.355,

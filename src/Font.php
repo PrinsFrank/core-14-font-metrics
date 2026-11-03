@@ -4,5 +4,6 @@ namespace PrinsFrank\Core14FontMetrics;
 
 interface Font {
     public function getWidth(): float;
+
     public static function fromCharacterCode(int $code): ?self;
 }

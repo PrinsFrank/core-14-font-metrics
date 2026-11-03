@@ -319,8 +319,7 @@ enum TimesBold implements Font {
     case imacron;
     case Euro;
 
-    public function getWidth(): float
-    {
+    public function getWidth(): float {
         return match ($this) {
             self::space => 0.250,
             self::exclam => 0.333,

@@ -389,8 +389,7 @@ enum Symbol implements Font {
         };
     }
 
-    public static function fromCharacterCode(int $code): ?self
-    {
+    public static function fromCharacterCode(int $code): ?self {
         return match ($code) {
             32 => self::space,
             33 => self::exclam,

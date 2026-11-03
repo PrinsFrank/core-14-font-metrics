@@ -318,6 +318,7 @@ enum TimesItalic implements Font {
     case onesuperior;
     case imacron;
     case Euro;
+
     public function getWidth(): float {
         return match ($this) {
             self::space => 0.250,
