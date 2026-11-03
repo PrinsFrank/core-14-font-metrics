@@ -1,0 +1,12 @@
+{
+    "name": "prinsfrank/core-14-font-metrics",
+    "description": "Font metrics for the core 14 PostScript Fonts",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "PrinsFrank\\Core14FontMetrics\\": "src/"
+        }
+    },
+    "require": {}
+}
